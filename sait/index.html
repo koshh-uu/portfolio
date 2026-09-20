@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PORTFOLIO — Команда из 5</title>
+<!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet"> -->
+<link rel="stylesheet" href="style.css" />
+<script src="script.js"></script>
+</head>
+<body>
+
+  <!-- ===== КАНВАС ДЛЯ ПАСХАЛКИ (частицы) ===== -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- ===== ВЕРХНЯЯ ПАНЕЛЬ ===== -->
+  <header class="topbar">
+    <div class="topbar__left">
+      <span class="dot">✱</span>
+      <span class="tag">WEB DEVELOPERS</span>
+    </div>
+    <div class="topbar__right">
+      <span class="tag">поставьте 5 пж</span>
+      <span class="line-arrow">→</span>
+    </div>
+  </header>
+
+  <!-- ===== ОСНОВНАЯ СЦЕНА ===== -->
+  <main class="stage">
+
+    <!-- Вертикальные подписи слева/справа -->
+    <!-- <div class="side-text side-text--left">
+      <span>UI / UX DESIGN</span>
+      <span>WEB DEVELOPMENT</span>
+    </div>
+    <div class="side-text side-text--right">
+      <span>BRANDING</span>
+      <span>DIGITAL EXPERIENCES</span>
+    </div> -->
+
+    <!-- Огромный заголовок PORTFOLIO -->
+    <h1 class="hero-title" id="heroTitle">PORTFOLIO</h1>
+
+    <!-- ===== КАРТОЧКИ УЧАСТНИКОВ ===== -->
+    <section class="cards" id="cards">
+
+      <!-- ============ КАРТОЧКА 1 ============ -->
+      <article class="card" data-index="0"
+               data-birth="2008-03-23"
+               data-photos="images/алиса.jpg,images/алиса2.jpg,images/photo1c.jpg"
+               data-quote="Научитесь балдеть.">
+        <div class="card__halo"></div>
+
+        <div class="card__photo">
+          <div class="photo-slider" data-current="0">
+            <img class="photo-slide active" src="images/алиса.jpg" alt="">
+            <img class="photo-slide" src="images/алиса2.jpg" alt="">
+            <!-- <img class="photo-slide" src="images/photo1c.jpg" alt=""> -->
+          </div>
+          <div class="photo-dots"></div>
+        </div>
+
+        <div class="card__head">
+          <p class="hello">ПРИВЕТ, Я</p>
+          <h2 class="name">АЛИСА<br>ШТЕФАН</h2>
+          <p class="role">ANIMATION &amp; "WOW"</p>
+        </div>
+
+        <div class="card__body">
+          <p class="about">Я творческая личность с аналогичным складом ума. Люблю изучать мир и брать от него всю гореч и сладость. Обожаю окунаться в новое</p>
+
+          <blockquote class="quote">
+            <span class="quote__mark">“</span>
+            <span class="quote__text"></span>
+          </blockquote>
+
+          <div class="meta">
+            <div class="meta__item">
+              <span class="meta__label">ВОЗРАСТ</span>
+              <span class="meta__value age" data-age></span>
+            </div>
+            <div class="meta__item">
+              <span class="meta__label">В СЕКУНДАХ</span>
+              <span class="meta__value seconds" data-seconds></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card__sign">ИСП-Д41</div>
+      </article>
+
+      <!-- ============ КАРТОЧКА 2 ============ -->
+      <article class="card" data-index="1"
+               data-birth="2008-01-23"
+               data-photos="images/арина.jpg,images/арина2.jpg,images/photo2c.jpg"
+               data-quote="Упал один раз - падай второй, чего уж там.">
+        <div class="card__halo"></div>
+
+        <div class="card__photo">
+          <div class="photo-slider" data-current="0">
+            <img class="photo-slide active" src="images/арина.jpg" alt="">
+            <img class="photo-slide" src="images/арина2.jpg" alt="">
+            <!-- <img class="photo-slide" src="images/photo2c.jpg" alt=""> -->
+          </div>
+          <div class="photo-dots"></div>
+        </div>
+
+        <div class="card__head">
+          <p class="hello">ПРИВЕТ, Я</p>
+          <h2 class="name">АРИНА<br>КИРПИЧЕНКО</h2>
+          <p class="role">UI/UX &amp; Layout</p>
+        </div>
+
+        <div class="card__body">
+          <p class="about">Мечтаю о бесконечной кока коле, картошечке фри и роллах.<br> 
+          КМС по "а я же говорила"</p>
+
+          <blockquote class="quote">
+            <span class="quote__mark">“</span>
+            <span class="quote__text"></span>
+          </blockquote>
+
+          <div class="meta">
+            <div class="meta__item">
+              <span class="meta__label">ВОЗРАСТ</span>
+              <span class="meta__value age" data-age></span>
+            </div>
+            <div class="meta__item">
+              <span class="meta__label">В СЕКУНДАХ</span>
+              <span class="meta__value seconds" data-seconds></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card__sign">ИСП-Д41</div>
+      </article>
+
+      <!-- ============ КАРТОЧКА 3 ============ -->
+      <article class="card" data-index="2"
+               data-birth="2008-12-10"
+               data-photos="images/кот.jpg,images/кот1.jpg,images/photo3c.jpg"
+               data-quote="Кто не успел - тот опоздал.">
+        <div class="card__halo"></div>
+
+        <div class="card__photo">
+          <div class="photo-slider" data-current="0">
+            <img class="photo-slide active" src="images/кот.jpg" alt="">
+            <img class="photo-slide" src="images/кот1.jpg" alt="">
+            <!-- <img class="photo-slide" src="images/photo3c.jpg" alt=""> -->
+          </div>
+          <div class="photo-dots"></div>
+        </div>
+
+        <div class="card__head">
+          <p class="hello">ПРИВЕТ, Я</p>
+          <h2 class="name">АНЖЕЛА<br>КИЛЕ</h2>
+          <p class="role">JS Logic &amp; DOM</p>
+        </div>
+
+        <div class="card__body">
+          <p class="about">Мечтаю о квартире, деньгах и амням</p>
+
+          <blockquote class="quote">
+            <span class="quote__mark">“</span>
+            <span class="quote__text"></span>
+          </blockquote>
+
+          <div class="meta">
+            <div class="meta__item">
+              <span class="meta__label">ВОЗРАСТ</span>
+              <span class="meta__value age" data-age></span>
+            </div>
+            <div class="meta__item">
+              <span class="meta__label">В СЕКУНДАХ</span>
+              <span class="meta__value seconds" data-seconds></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card__sign">ИСП-Д41</div>
+      </article>
+
+      <!-- ============ КАРТОЧКА 4 ============ -->
+      <article class="card" data-index="3"
+               data-birth="2008-04-04"
+               data-photos="images/диана.jpg,images/photo4b.jpg,images/photo4c.jpg"
+               data-quote="Сначала сделай, чтобы работало, потом — правильно.">
+        <div class="card__halo"></div>
+
+        <div class="card__photo">
+          <div class="photo-slider" data-current="0">
+            <img class="photo-slide active" src="images/диана.jpg" alt="">
+            <!-- <img class="photo-slide" src="images/photo4b.jpg" alt="">
+            <img class="photo-slide" src="images/photo4c.jpg" alt=""> -->
+          </div>
+          <div class="photo-dots"></div>
+        </div>
+
+        <div class="card__head">
+          <p class="hello">ПРИВЕТ, Я</p>
+          <h2 class="name">ДИАНА<br>МАЧУНИНА</h2>
+          <p class="role">JS Logic &amp; DOM</p>
+        </div>
+
+        <div class="card__body">
+          <p class="about">Мечтаю запустить свой open-source проект и войти в программный комитет крупного хакатона.</p>
+
+          <blockquote class="quote">
+            <span class="quote__mark">“</span>
+            <span class="quote__text"></span>
+          </blockquote>
+
+          <div class="meta">
+            <div class="meta__item">
+              <span class="meta__label">ВОЗРАСТ</span>
+              <span class="meta__value age" data-age></span>
+            </div>
+            <div class="meta__item">
+              <span class="meta__label">В СЕКУНДАХ</span>
+              <span class="meta__value seconds" data-seconds></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card__sign">ИСП-Д41</div>
+      </article>
+
+      <!-- ============ КАРТОЧКА 5 ============ -->
+      <article class="card" data-index="4"
+               data-birth="2008-09-05"
+               data-photos="images/лера.jpg,images/лера2.jpg,images/лера3.jpg"
+               data-quote="Не спеши, вдруг успеешь.">
+        <div class="card__halo"></div>
+
+        <div class="card__photo">
+          <div class="photo-slider" data-current="0">
+            <img class="photo-slide active" src="images/лера.jpg" alt="">
+            <img class="photo-slide" src="images/лера2.jpg" alt="">
+            <img class="photo-slide" src="images/лера3.jpg" alt="">
+          </div>
+          <div class="photo-dots"></div>
+        </div>
+
+        <div class="card__head">
+          <p class="hello">ПРИВЕТ, Я</p>
+          <h2 class="name">ЛЕРА<br>ДАЖУН</h2>
+          <p class="role">Integration &amp; Deployment</p>
+        </div>
+
+        <div class="card__body">
+          <p class="about">Увлекаюсь музыкой, играю на гитаре, барабанах, занимаюсь вокалом. Катаю на скейте (умею круто падать). 8 лет занималась профессионально бильярдом. Немного увлекаюсь компьютерным железом.</p>
+
+          <blockquote class="quote">
+            <span class="quote__mark">“</span>
+            <span class="quote__text"></span>
+          </blockquote>
+
+          <div class="meta">
+            <div class="meta__item">
+              <span class="meta__label">ВОЗРАСТ</span>
+              <span class="meta__value age" data-age></span>
+            </div>
+            <div class="meta__item">
+              <span class="meta__label">В СЕКУНДАХ</span>
+              <span class="meta__value seconds" data-seconds></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card__sign">ИСП-Д41</div>
+      </article>
+
+    </section>
+
+    <!-- ===== НАВИГАЦИЯ / ПЕРЕКЛЮЧАТЕЛЬ КАРТОЧЕК ===== -->
+    <nav class="switcher" id="switcher">
+      <button class="switcher__btn prev" aria-label="Назад">←</button>
+
+      <div class="switcher__list" id="switcherList">
+        <!-- JS сгенерирует кнопки по числу карточек -->
+      </div>
+
+      <button class="switcher__btn next" aria-label="Вперёд">→</button>
+    </nav>
+
+    <!-- ===== ПОДСКАЗКИ ПО ПАСХАЛКАМ ===== -->
+    <div class="hints">
+      <span class="hint">⌨ Konami Code = секрет</span>
+      <span class="hint">✱ Кликни логотип 3 раза</span>
+    </div>
+  </main>
+
+  <!-- ===== ТОСТ ПАСХАЛКИ ===== -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
